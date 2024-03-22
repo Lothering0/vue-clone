@@ -12,6 +12,7 @@ export interface WatchOptions {
 
 /** A watcher will invoke its callback every time when one of the provided dependencies has changed */
 export const watch = (dependencies: WatchDependencies, callback: WatchCallback, options?: WatchOptions) => {
+  /** Explicit arry of dependencies */
   const deps = Array.isArray(dependencies) ? dependencies : [dependencies];
 
   /** Effect without tracking dependencies */
